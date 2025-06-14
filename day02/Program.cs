@@ -27,10 +27,7 @@ foreach (var line in lines)
         nvalidp1++;
     }
 
-    if (
-        (pw[policy1 - 1] == letter && pw[policy2 - 1] != letter)
-        || (pw[policy1 - 1] != letter && pw[policy2 - 1] == letter)
-    )
+    if (pw[policy1 - 1] == letter ^ pw[policy2 - 1] == letter)
     {
         nvalidp2++;
     }
